@@ -14,29 +14,35 @@
 </head>
 
 <body>
-    <div id="homepage">
-        <nav class="navbar sticky-top navbar-expand-md navbar-dark">
-            <div class="container">
-                <a class="navbar-brand pt-0 pb-0" href="#">
-                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/food-munch-img.png" class="food-munch-logo" />
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav ml-auto">
-                        <a class="nav-link nav-item active ml-auto" id="navItem1" href="#">
-                            Why Choose Us?
-                            <span class="sr-only">(current)</span>
-                        </a>
-                        <a class="nav-link nav-item ml-auto" href="#" id="navItem2">Explore Services</a>
-                        <a class="nav-link nav-item ml-auto" href="#" id="navItem3">Delivery & Payment</a>
-                        <a class="nav-link nav-item ml-auto" href="#" id="navItem4">Follow Us</a>
-                    </div>
+    <div class="whatsapp-float-container" id="whatsapp-float" onclick="window.open('https://api.whatsapp.com/send?phone=6380248073&text=Hi')">
+        <div class="whatsapp-icon-container shadow d-block d-md-none">
+            <i class="bi bi-whatsapp whatsapp-icon"></i>
+        </div>
+        <div class="whatsapp-text-container shadow d-none d-md-flex flex-row justify-content-center">
+            <p class="whatsapp-text">Whatsapp Us</p>
+            <i class="bi bi-whatsapp whatsapp-lg"></i>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand pt-0 pb-0" href="#">
+                <img src="" class="logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-link nav-item active" id="navItem1" href="#">Home</a>
+                    <a class="nav-link nav-item" href="page2.html" id="navItem2">Explore Services</a>
+                    <a class="nav-link nav-item" href="#" id="navItem3">Delivery & Payment</a>
+                    <a class="nav-link nav-item" href="#" id="navItem4">Follow Us</a>
                 </div>
             </div>
-            </nav>
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="2500">
+        </div>
+    </nav>
+    <div id="sectionhomepage" class="homepage">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="2500" data-pause="false">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -44,13 +50,13 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/tajmahal-c1-img.png" class="carousel-img d-block w-100" alt="..." />
+                    <img src="https://via.placeholder.com/3000x1280" class="carousel-img d-block w-100" alt="..." />
                 </div>
                 <div class="carousel-item">
-                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/tajmahal-c2-img.png" class="carousel-img d-block w-100" alt="..." />
+                    <img src="https://via.placeholder.com/3000x1280" class="carousel-img d-block w-100" alt="..." />
                 </div>
                 <div class="carousel-item">
-                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/tajmahal-c3-img.png" class="carousel-img d-block w-100" alt="..." />
+                    <img src="https://via.placeholder.com/3000x1280" class="carousel-img d-block w-100" alt="..." />
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -62,64 +68,197 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        <div class="services-section pt-3 pb-3">
-            <div class="container">
+        <div class="services-section">
+            <div class="container-fluid homepage-content">
                 <div class="row">
-                    <div class="col-12">
-                        <h1 class="services-section-heading">Freeze Your Moments!</h1>
-                    </div>
-                    <div class="col-6 col-md-6 col-lg-3 order-md-4">
-                        <div class="shadow services-item-card p-2 mb-3">
-                            <h1 class="services-card-title">Wedding Photograpy</h1>
-                            <img src="https://via.placeholder.com/464x428" class="services-image w-100" />
+                    <div class="col-12 col-md-10">
+                        <div class="row">
+                            <div class="col-12 pb-2 home-heading">
+                                <h1 class="services-section-heading">Freeze Your Moments!</h1>
+                            </div>
+                            <div class="services-card-container col-6 col-md-6 col-lg-3 order-md-4 order-lg-1">
+                                <div class="services-item-card p-2 mb-3" onclick="display('section-weddingphotograpy')">
+                                    <h1 class="services-card-title">Wedding Photograpy</h1>
+                                    <img src="https://via.placeholder.com/464x428" class="services-image w-100" />
+                                </div>
+                            </div>
+                            <div class="services-card-container col-6 col-md-6 col-lg-3 order-md-5  order-lg-2">
+                                <div class="services-item-card p-2 mb-3" onclick="display('section-birthdayphotograpy')">
+                                    <h1 class="services-card-title">Birthday Photograpy</h1>
+                                    <img src="https://via.placeholder.com/464x428" class="services-image w-100" />
+                                </div>
+                            </div>
+                            <div class="services-card-container col-6 col-md-4 col-lg-3 order-md-1 order-lg-3">
+                                <div class="services-item-card p-2 mb-3" onclick="display('section-baptismphotograpy')">
+                                    <h1 class="services-card-title">Baptism Photograpy</h1>
+                                    <img src="https://via.placeholder.com/464x428" class="services-image w-100" />
+                                </div>
+                            </div>
+                            <div class="services-card-container col-6 col-md-4 col-lg-3 order-md-2 order-lg-4">
+                                <div class="services-item-card p-2 mb-3" onclick="display('section-birthdayphotograpy')">
+                                    <h1 class="services-card-title">Ear Piercing</h1>
+                                    <img src="https://via.placeholder.com/464x428" class="services-image w-100" />
+                                </div>
+                            </div>
+                            <div class="services-card-container col-6 col-md-4 col-lg-3 order-md-3 order-lg-5">
+                                <div class="services-item-card p-2 mb-3" onclick="display('section-pubertyceremony')">
+                                    <h1 class="services-card-title">Puberty Ceremony</h1>
+                                    <img src="https://via.placeholder.com/464x428" class="services-image w-100" />
+                                </div>
+                            </div>
+                            <div class="services-card-container col-6 col-md-4 col-lg-3 order-md-6">
+                                <div class="services-item-card p-2 mb-3" onclick="display('section-candidphotograpy')">
+                                    <h1 class="services-card-title">Candid Photograpy</h1>
+                                    <img src="https://via.placeholder.com/464x428" class="services-image w-100" />
+                                </div>
+                            </div>
+                            <div class="services-card-container col-6 col-md-4 col-lg-3 order-md-7">
+                                <div class="services-item-card p-2 mb-3" onclick="display('section-productphotograpy')">
+                                    <h1 class="services-card-title">Product Photograpy</h1>
+                                    <img src="https://via.placeholder.com/464x428" class="services-image w-100" />
+                                </div>
+                            </div>
+                            <div class="services-card-container col-6 col-md-4 col-lg-3 order-md-8">
+                                <div class="services-item-card p-2 mb-3" onclick="display('section-eventphotograpy')">
+                                    <h1 class="services-card-title">Event Photograpy</h1>
+                                    <img src="https://via.placeholder.com/464x428" class="services-image w-100" />
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-6 col-md-6 col-lg-3  order-md-5">
-                        <div class="shadow services-item-card p-2 mb-3">
-                            <h1 class="services-card-title">Birthday Photograpy</h1>
-                            <img src="https://via.placeholder.com/464x428" class="services-image w-100" />
-                        </div>
+                    <div class="d-none col-md-2 d-md-block">
+                        <div class="columntwo p-2 mb-3">
+                            <img class="photograher-png w-100" src="https://i.ibb.co/McYFz1W/photographer.png" alt="Photographer">
+                        </div>                            
                     </div>
-                    <div class="col-6 col-md-4 col-lg-3 order-md-1">
-                        <div class="services-item-card shadow p-2 mb-3">
-                            <h1 class="services-card-title">Baptism Photograpy</h1>
-                            <img src="https://via.placeholder.com/464x428" class="services-image w-100" />
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container-fluid">
+                <div class="row p-5">
+                    <div class="col-4">                            
+                        <h2 class="footer-headings">Contact Us:</h2>                        
+                        <div class="footer-contents-container d-flex flex-row">
+                            <i class="footer-icon bi bi-telephone-fill"></i>  
+                            <p class="footer-contents" onclick="window.open('tel:6380248073')">
+                                +91 6380-248-073
+                            </p>
                         </div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-3 order-md-2">
-                        <div class="services-item-card shadow p-2 mb-3">
-                            <h1 class="services-card-title">Ear Piercing</h1>
-                            <img src="https://via.placeholder.com/464x428" class="services-image w-100" />
+                        <div class="footer-contents-container d-flex flex-row">
+                            <i class="footer-icon bi bi-envelope"></i>  
+                            <p class="footer-contents" onclick="window.open('mailto:email@gmail.com?subject=Inquiry about Photography Services&body=Hi,%0D%0A%0D%0AI am interested in your photography services. Please provide more information about your packages.%0D%0A%0D%0AThank you!%0D%0A%0D%0ABest regards,%0D%0A[Name]%0D%0A[Contact Number]', '_blank')">
+                                email@gmail.com
+                            </p>
                         </div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-3 order-md-3">
-                        <div class="services-item-card shadow p-2 mb-3">
-                            <h1 class="services-card-title">Puberty Ceremony</h1>
-                            <img src="https://via.placeholder.com/464x428" class="services-image w-100" />
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-3 order-md-6">
-                        <div class="services-item-card shadow p-2 mb-3">
-                            <h1 class="services-card-title">Candid Photograpy</h1>
-                            <img src="https://via.placeholder.com/464x428" class="services-image w-100" />
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-3 order-md-7">
-                        <div class="services-item-card shadow p-2 mb-3">
-                            <h1 class="services-card-title">Product Photograpy</h1>
-                            <img src="https://via.placeholder.com/464x428" class="services-image w-100" />
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-3 order-md-8">
-                        <div class="services-item-card shadow p-2 mb-3">
-                            <h1 class="services-card-title">Event Photograpy</h1>
-                            <img src="https://via.placeholder.com/464x428" class="services-image w-100" />
+                        <div class="footer-contents-container d-flex flex-row">
+                            <i class="footer-icon bi bi-geo-alt-fill"></i>  
+                            <p class="footer-contents" onclick="window.open('https://maps.app.goo.gl/vYHv37cWRzMPJAif7', '_blank')">
+                                No. 46/6/2, Nanthagopalpuram, East Coast Rd, Selvanayagapuram, Kandhasamy Puram, Thoothukudi, Tamil Nadu 628002
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <div id="section-weddingphotograpy" class="service-page hidden">
+        <div class="container-fluid wedding-content pt-3">
+            <div class="row">
+                <div class="col-5 col-lg-4 col-md-4 col-sm-2wedding-flower top-corner-img-container">
+                    <img src="https://i.ibb.co/0ZL7C1f/wedding-flower.png" class="top-corner-img">
+                </div>
+                <div class="col-5 col-lg-4 col-md-4 col-sm-2wedding-flower bottom-corner-img-container">
+                    <img src="https://i.ibb.co/TB2FhdP/wedding-flower.png" class="bottom-corner-img">
+                </div>
+                <div class="col-12 pb-2 section-heading-container pl-3">
+                    <h1 class="wedding-section-heading">Wedding Photos</h1>
+                </div>
+                <div class="col-12 col-sm-9 col-md-6 col-lg-6 wedding-card-container order-1 order-sm-1 order-md-1">
+                    <div class="shadow wedding-images-card mb-3">
+                        <img src="https://via.placeholder.com/1640x676" class="wedding-images w-100" />
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3 col-md-3 col-lg-3 wedding-card-container order-2 order-sm-2 order-md-2">
+                    <div class="shadow wedding-images-card mb-3">
+                        <img src="https://via.placeholder.com/464x428" class="wedding-images w-100" />
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3 col-md-3 col-lg-3 wedding-card-container order-3 order-sm-3 order-md-3">
+                    <div class="shadow wedding-images-card mb-3">
+                        <img src="https://via.placeholder.com/464x428" class="wedding-images w-100" />
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-3 wedding-card-container order-5 order-sm-7 order-md-4">
+                    <div class="shadow wedding-images-card mb-3">
+                        <img src="https://via.placeholder.com/464x428" class="wedding-images w-100" />
+                    </div>
+                </div>
+                <div class="col-12 col-sm-9 col-md-6 col-lg-6 wedding-card-container order-4 order-sm-4 order-md-5">
+                    <div class="shadow wedding-images-card mb-3">
+                        <img src="https://via.placeholder.com/1640x676" class="wedding-images w-100" />
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-3 wedding-card-container order-6 order-sm-8 order-md-6">
+                    <div class="shadow wedding-images-card mb-3">
+                        <img src="https://via.placeholder.com/464x428" class="wedding-images w-100" />
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3 col-md-3 col-lg-3 wedding-card-container order-8 order-sm-6 order-md-7">
+                    <div class="shadow wedding-images-card mb-3">
+                        <img src="https://via.placeholder.com/464x428" class="wedding-images w-100" />
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-3 wedding-card-container order-9 order-sm-9 order-md-8">
+                    <div class="shadow wedding-images-card mb-3">
+                        <img src="https://via.placeholder.com/464x428" class="wedding-images w-100" />
+                    </div>
+                </div>
+                <div class="col-12 col-sm-9 col-md-6 col-lg-6 wedding-card-container order-7 order-sm-5 order-md-9">
+                    <div class="shadow wedding-images-card mb-3">
+                        <img src="https://via.placeholder.com/1640x676" class="wedding-images w-100" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="section-birthdayphotograpy" class="service-page hidden">
+        <h1>Birthday Photography Details</h1>
+        <p>Details about Birthday Photography service...</p>
+    </div>
+
+    <div id="section-baptismphotograpy" class="service-page hidden">
+        <h1>Baptism Photography Details</h1>
+        <p>Details about Baptism Photography service...</p>
+    </div>
+
+    <div id="section-earpiercing" class="service-page hidden">
+        <h1>Ear Piercing Details</h1>
+        <p>Details about Ear Piercing service...</p>
+    </div>
+
+    <div id="section-pubertyceremony" class="service-page hidden">
+        <h1>Puberty Ceremony Details</h1>
+        <p>Details about Puberty Ceremony service...</p>
+    </div>
+
+    <div id="section-candidphotograpy" class="service-page hidden">
+        <h1>Candid Photography Details</h1>
+        <p>Details about Candid Photography service...</p>
+    </div>
+
+    <div id="section-productphotograpy" class="service-page hidden">
+        <h1>Product Photography Details</h1>
+        <p>Details about Product Photography service...</p>
+    </div>
+
+    <div id="section-eventphotograpy" class="service-page hidden">
+        <h1>Event Photography Details</h1>
+        <p>Details about Event Photography service...</p>
+    </div>
+    
 </body>
 
 </html>
