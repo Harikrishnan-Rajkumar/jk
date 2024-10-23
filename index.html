@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <style>
+        body {
+            background: linear-gradient(to bottom, black 13%, white 18%, white 100%);
+        }
+    </style>
 </head>
 
 <body>
@@ -22,27 +27,26 @@
             <p class="whatsapp-text">Whatsapp Us</p>
             <i class="bi bi-whatsapp whatsapp-lg"></i>
         </div>
-    </div>
-    <nav class="navbar navbar-expand-md navbar-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand pt-0 pb-0" href="#">
-                <img src="" class="logo" />
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ml-auto">
-                    <a class="nav-link nav-item active" id="navItem1" href="#">Home</a>
-                    <a class="nav-link nav-item" href="page2.html" id="navItem2">Explore Services</a>
-                    <a class="nav-link nav-item" href="#" id="navItem3">Delivery & Payment</a>
-                    <a class="nav-link nav-item" href="#" id="navItem4">Follow Us</a>
-                </div>
+    </div> 
+    <nav class="navbar sticky-top navbar-expand-lg transparent-navbar">
+        <a class="navbar-brand" href="index.html">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-link nav-option-color" href="#">
+                Home
+                <span class="sr-only">(current)</span>
+                </a>
+                <a class="nav-link nav-option-color" href="#">Features</a>
+                <a class="nav-link nav-option-color" href="gallery.html">Gallery</a>
             </div>
         </div>
     </nav>
     <div id="sectionhomepage" class="homepage">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="2500" data-pause="false">
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel" data-interval="2500" data-pause="false">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -73,71 +77,95 @@
                 <div class="row">
                     <div class="col-12 col-md-10">
                         <div class="row">
-                            <div class="col-12 pb-2 home-heading">
-                                <h1 class="services-section-heading">Freeze Your Moments!</h1>
+                            <div class="col-12 home-heading">
+                                <h1 class="services-section-heading">PHOTOGRAPHY</h1>
                             </div>
-                            <div class="services-card-container col-6 col-md-6 col-lg-3 order-md-4 order-lg-1">
-                                <div class="services-item-card p-2 mb-3" onclick="display('section-weddingphotograpy')">
-                                    <h1 class="services-card-title">Wedding Photograpy</h1>
+                            <div class="col-12 home-heading">
+                                <h2 class="services-section-heading">Freeze & Frame Your Moments</h2>
+                            </div>
+                            <div class="services-card-container col-4 col-sm-3"> 
+                                <div class="services-item-card">
+                                    <h1 class="services-card-title">Wedding Photography</h1> 
                                     <img src="https://via.placeholder.com/464x428" class="services-image w-100" />
                                 </div>
                             </div>
-                            <div class="services-card-container col-6 col-md-6 col-lg-3 order-md-5  order-lg-2">
-                                <div class="services-item-card p-2 mb-3" onclick="display('section-birthdayphotograpy')">
-                                    <h1 class="services-card-title">Birthday Photograpy</h1>
+                            <div class="services-card-container col-4 col-sm-3">
+                                <div class="services-item-card">
+                                    <h1 class="services-card-title">Birthday Photography</h1> 
                                     <img src="https://via.placeholder.com/464x428" class="services-image w-100" />
                                 </div>
                             </div>
-                            <div class="services-card-container col-6 col-md-4 col-lg-3 order-md-1 order-lg-3">
-                                <div class="services-item-card p-2 mb-3" onclick="display('section-baptismphotograpy')">
-                                    <h1 class="services-card-title">Baptism Photograpy</h1>
-                                    <img src="https://via.placeholder.com/464x428" class="services-image w-100" />
-                                </div>
-                            </div>
-                            <div class="services-card-container col-6 col-md-4 col-lg-3 order-md-2 order-lg-4">
-                                <div class="services-item-card p-2 mb-3" onclick="display('section-birthdayphotograpy')">
-                                    <h1 class="services-card-title">Ear Piercing</h1>
-                                    <img src="https://via.placeholder.com/464x428" class="services-image w-100" />
-                                </div>
-                            </div>
-                            <div class="services-card-container col-6 col-md-4 col-lg-3 order-md-3 order-lg-5">
-                                <div class="services-item-card p-2 mb-3" onclick="display('section-pubertyceremony')">
+                            <div class="services-card-container col-4 col-sm-3"> 
+                                <div class="services-item-card">
                                     <h1 class="services-card-title">Puberty Ceremony</h1>
                                     <img src="https://via.placeholder.com/464x428" class="services-image w-100" />
                                 </div>
                             </div>
-                            <div class="services-card-container col-6 col-md-4 col-lg-3 order-md-6">
-                                <div class="services-item-card p-2 mb-3" onclick="display('section-candidphotograpy')">
-                                    <h1 class="services-card-title">Candid Photograpy</h1>
+                            <div class="services-card-container col-4 col-sm-3"> 
+                                <div class="services-item-card">
+                                    <h1 class="services-card-title">Baptism Photography</h1> 
                                     <img src="https://via.placeholder.com/464x428" class="services-image w-100" />
                                 </div>
                             </div>
-                            <div class="services-card-container col-6 col-md-4 col-lg-3 order-md-7">
-                                <div class="services-item-card p-2 mb-3" onclick="display('section-productphotograpy')">
-                                    <h1 class="services-card-title">Product Photograpy</h1>
+                            <div class="services-card-container col-4 col-sm-3">
+                                <div class="services-item-card">
+                                    <h1 class="services-card-title">Ear Piercing</h1>
                                     <img src="https://via.placeholder.com/464x428" class="services-image w-100" />
                                 </div>
                             </div>
-                            <div class="services-card-container col-6 col-md-4 col-lg-3 order-md-8">
-                                <div class="services-item-card p-2 mb-3" onclick="display('section-eventphotograpy')">
-                                    <h1 class="services-card-title">Event Photograpy</h1>
+                            <div class="services-card-container col-4 col-sm-3"> 
+                                <div class="services-item-card">
+                                    <h1 class="services-card-title">Candid Photography</h1> 
                                     <img src="https://via.placeholder.com/464x428" class="services-image w-100" />
                                 </div>
                             </div>
+                            <div class="services-card-container col-4 col-sm-3"> 
+                                <div class="services-item-card">
+                                    <h1 class="services-card-title">Product Photography</h1> 
+                                    <img src="https://via.placeholder.com/464x428" class="services-image w-100" />
+                                </div>
+                            </div>
+                            <div class="services-card-container col-4 col-sm-3"> 
+                                <div class="services-item-card">
+                                    <h1 class="services-card-title">Event Photography</h1> 
+                                    <img src="https://via.placeholder.com/464x428" class="services-image w-100" />
+                                </div>
+                            </div> 
+                            <div class="view-gallery-container col-4 col-sm-3 d-flex flex-column justify-content-center"> 
+                                <div class="view-gallery-card" onclick="window.location.href='gallery.html'">
+                                    <h1 class="view-gallery">View Gallery</h1>
+                                </div>
+                            </div>                             
                         </div>
                     </div>
                     <div class="d-none col-md-2 d-md-block">
-                        <div class="columntwo p-2 mb-3">
+                        <div class="photograher-png-card p-2">
                             <img class="photograher-png w-100" src="https://i.ibb.co/McYFz1W/photographer.png" alt="Photographer">
                         </div>                            
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="services-section-heading">VIDEOGRAPHY</h1>
+                    </div>
+                    <div class="col-12 home-heading">
+                        <h2 class="services-section-heading">We Capture Cinematic Shots</h2>
+                    </div>                                        
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="services-section-heading">PHOTOBOOKS & ALBUMS</h2>
+                    </div>
+                    <div class="col-12 home-heading">
+                        <h2 class="services-section-heading">Customized with Trending Style</h2>
+                    </div>                                        
+                </div>
             </div>
         </div>
         <div class="footer">
-            <div class="container-fluid">
-                <div class="row p-5">
-                    <div class="col-4">                            
+            <div class="container-fluid footer-container">
+                <div class="row footer-row">
+                    <div class="col-6 col-lg-4">                            
                         <h2 class="footer-headings">Contact Us:</h2>                        
                         <div class="footer-contents-container d-flex flex-row">
                             <i class="footer-icon bi bi-telephone-fill"></i>  
@@ -154,14 +182,55 @@
                         <div class="footer-contents-container d-flex flex-row">
                             <i class="footer-icon bi bi-geo-alt-fill"></i>  
                             <p class="footer-contents" onclick="window.open('https://maps.app.goo.gl/vYHv37cWRzMPJAif7', '_blank')">
-                                No. 46/6/2, Nanthagopalpuram, East Coast Rd, Selvanayagapuram, Kandhasamy Puram, Thoothukudi, Tamil Nadu 628002
+                                No. 46/6/2, Nanthagopalpuram, East Coast Rd, Selvanayagapuram, Kandhasamy Puram, Tuticorin, Tamil Nadu 628002
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-4">                            
+                        <h2 class="footer-headings">Contact Us:</h2>                        
+                        <div class="footer-contents-container d-flex flex-row">
+                            <i class="footer-icon bi bi-telephone-fill"></i>  
+                            <p class="footer-contents" onclick="window.open('tel:6380248073')">
+                                +91 6380-248-073
+                            </p>
+                        </div>
+                        <div class="footer-contents-container d-flex flex-row">
+                            <i class="footer-icon bi bi-envelope"></i>  
+                            <p class="footer-contents" onclick="window.open('mailto:email@gmail.com?subject=Inquiry about Photography Services&body=Hi,%0D%0A%0D%0AI am interested in your photography services. Please provide more information about your packages.%0D%0A%0D%0AThank you!%0D%0A%0D%0ABest regards,%0D%0A[Name]%0D%0A[Contact Number]', '_blank')">
+                                email@gmail.com
+                            </p>
+                        </div>
+                        <div class="footer-contents-container d-flex flex-row">
+                            <i class="footer-icon bi bi-geo-alt-fill"></i>  
+                            <p class="footer-contents" onclick="window.open('https://maps.app.goo.gl/vYHv37cWRzMPJAif7', '_blank')">
+                                No. 46/6/2, Nanthagopalpuram, East Coast Rd, Selvanayagapuram, Kandhasamy Puram, Tuticorin, Tamil Nadu 628002
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-4">                            
+                        <h2 class="footer-headings">Contact Us:</h2>                        
+                        <div class="footer-contents-container d-flex flex-row">
+                            <i class="footer-icon bi bi-telephone-fill"></i>  
+                            <p class="footer-contents" onclick="window.open('tel:6380248073')">
+                                +91 6380-248-073
+                            </p>
+                        </div>
+                        <div class="footer-contents-container d-flex flex-row">
+                            <i class="footer-icon bi bi-envelope"></i>  
+                            <p class="footer-contents" onclick="window.open('mailto:email@gmail.com?subject=Inquiry about Photography Services&body=Hi,%0D%0A%0D%0AI am interested in your photography services. Please provide more information about your packages.%0D%0A%0D%0AThank you!%0D%0A%0D%0ABest regards,%0D%0A[Name]%0D%0A[Contact Number]', '_blank')">
+                                email@gmail.com
+                            </p>
+                        </div>
+                        <div class="footer-contents-container d-flex flex-row">
+                            <i class="footer-icon bi bi-geo-alt-fill"></i>  
+                            <p class="footer-contents" onclick="window.open('https://maps.app.goo.gl/vYHv37cWRzMPJAif7', '_blank')">
+                                No. 46/6/2, Nanthagopalpuram, East Coast Rd, Selvanayagapuram, Kandhasamy Puram, Tuticorin, Tamil Nadu 628002
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div>  
 </body>
-
 </html>
