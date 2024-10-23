@@ -3,12 +3,6 @@
 body{
     overflow-x: auto;
 }
-.container {
-    width: 90vw; /* or another vw value */
-    max-width: 1200px;
-    overflow-x: auto; /* Allows horizontal scrolling */
-
-}
 .homepage{    
     background: linear-gradient(to top,     
             rgb(90, 41, 112),
@@ -20,26 +14,37 @@ body{
     padding-left: 7vw;
     padding-right: 7vw;
 }
-.hidden {
-    display: none;
-}
-.wedding-page{
-    height: 100vh;
-}
 .carousel-indicators{
     top: 28vw;
     padding-bottom: 0px;
     margin-bottom: 0px;
 }
-.navbar {
-    background-color: rgba(0, 0, 0, 0.4);  
-    backdrop-filter: blur(10px);
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    width: 100%;
-    height: 5vw;
+.nav-option-color{
+    color: rgb(0, 230, 230);
+    font-weight: 500;
 }
+.navbar-nav .nav-link:hover {
+    color: white; /* Remove hover color */
+    background-color: transparent !important; /* Remove hover background */
+}
+.navbar{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.585);
+    backdrop-filter: blur(10px);
+}
+.navbar-toggler {
+    border: none;
+}
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba(255, 255, 255, 1)" stroke-width="2" d="M5 7h20M5 15h20M5 23h20" /%3E%3C/svg%3E');
+}
+.navbar-brand{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
 .carousel-img {
     -webkit-mask-image: linear-gradient(to top, transparent 0%, black 90%);
     mask-image: linear-gradient(to top, transparent 0%, black 16%);
@@ -52,25 +57,22 @@ body{
     margin: 0px;
     border-radius: 0.7vw;
 }
-
 .services-section {
-    margin-top: -11%;
-    padding-bottom: 5vw;
+    margin-top: -10%;
 }
 .services-section-heading {
     color: #183b56;
     font-family: "Roboto";
-    font-size: clamp(8px, calc(3.3vw + 5px), calc(3.3vw + 5px));
+    font-size: clamp(8px, calc(3.1vw + 5px), calc(3.1vw + 5px));
     font-weight: 700;
 }
 .home-heading{
     z-index: 11;
 }
-
 .services-card-title {
     color: #183b56;
     font-family: "Bree Serif";
-    font-size: clamp(11px, 1.4vw, 1.4vw);
+    font-size: clamp(9px, 1.3vw, 1.3vw);
     text-align: center;
     font-weight: 500;
     font-style: italic;
@@ -78,70 +80,55 @@ body{
     word-spacing: 1px;
     margin-right: 0px;
     margin-left: 0px;
+    margin-bottom: 0.35vw;
     padding-right: 0px;
     padding-left: 0px;
     z-index: 999;
 }
-
-.services-item-link {
-    color: #d0b200;
-    font-family: "Roboto";
-    font-size: 14px;
-    font-weight: 500;
-}
-
 .services-item-card {
-    border-radius: 1.2vw;
+    border-radius: 1.3vw;
     position: relative;
     background: rgba(255, 255, 255, 0.92);    
     box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);    
-    cursor: pointer;
     z-index: 10;
-}
-.services-item-card:hover {
-    box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.6);
-    background: rgba(255, 255, 255, 1);
-    transform: scale(1.04);
-    z-index: 9;
+    padding: calc(0.3vw + 2px);
 }
 .services-card-container{
-    margin-bottom: 1vw;
+    margin-bottom: 6px;
+    padding: 9px;
 }
+.view-gallery-container{
+    margin-top: -1vw;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.view-gallery{
+    color: rgb(0, 230, 230);
+    font-size: 3vw;
+    text-align: center;
+    font-family: "Bree Serif";
+}
+.view-gallery-card{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.585);
+    border-radius: 1.3vw;
+    height: 84%;
+}
+
+.view-gallery-card:hover{
+    transform: scale(1.03);
+}
+
 #carouselExampleIndicators{
     z-index: 2;
 }
-.logo {
-    width: 70px;
-    height: 80px;
-}
-#nav-item {
-    color: white;
-    font-family: "Roboto";
-    width: 50px;
-}
 
-#navItem2 {
-    color: white;
-    font-family: "Roboto";
-}
-
-#navItem3 {
-    color: white;
-    font-family: "Roboto";
-}
-
-#navItem4 {
-    color: white;
-    font-family: "Roboto";
-}
-
-#section-weddingphotograpy{
-    background: radial-gradient(circle, rgb(255, 0, 0, 0.9), rgba(157, 1, 1, 0.829));
+#section-gallery{
+    background: radial-gradient(circle, rgb(255, 0, 0), #cc0000);
     height: 100%;
-    padding-bottom: 30px;
 }
 
-.wedding-content {
+.gallery-content {
     position: relative;
     z-index: 2;
     padding-left: 7vw;
@@ -149,7 +136,7 @@ body{
 
 }
 @media (max-width: 576px) {
-    .wedding-content{
+    .gallery-content{
         padding-left: 30px;
     }   
 }
@@ -177,34 +164,13 @@ body{
     }
 }
 
-.list{
-    columns:300px;
-}
-.wedding-images-card{
-    background-color: rgba(132, 1, 1, 0.8); 
-    display: flex; /* Use flexbox to layout the card */
-    flex-direction: column; /* Arrange items in a column */
-    height: 100%;  
-    padding: 0.5vw;
-}
-.wedding-images-card:hover{    
-    transform: scale(1.03);
-}
-.wedding-images{
-    height: 100%; /* Fill the height of the card */
-    width: 100%;
-    *object-fit: cover;
-}
-.wedding-card-container{
-    margin-top: 2vw;
-    padding-left: 0px;
-}
 .top-corner-img-container{
     position: fixed;
-    top: 66px;
+    top: 3.2vw;
     left: 0px;
     display: block;
-    margin-left: -3vw;
+    margin-left: -1.4vw;
+    padding: 0px;
 }
 .bottom-corner-img-container{
     position: fixed;
@@ -219,30 +185,40 @@ body{
 .bottom-corner-img{
     width: 100%;
 }
-.wedding-section-heading{
+.gallery-section-heading{
     font-size: 3vw;
     text-align: center;
 }
-.footer {
-    background: linear-gradient(to top,
-            rgb(0, 0, 0, 0.75),
-            rgba(0, 0, 0, 0.3),
-            rgba(0, 0, 0, 0));
+.footer {    
+    position: relative;
+    background: linear-gradient(to bottom, 
+            rgba(0, 0, 0, 0) 0%, /* Top 10% */
+            rgba(0, 0, 0, 0.15) 20%, /* Solid until 10% */
+            rgba(0, 0, 0, 0.68) 100%);
     color: white;
+    z-index: 50;
+    padding-left: 4vw;
+}
+.footer-container{
+    padding-top: 1.5vw;
+    padding-left: 2vw;
+    padding-bottom: 3vw;
 }
 .footer-contents{
     margin-left: 1vw;
-    cursor: pointer;
-    font-size: calc(1vw + 5px);
+    margin-bottom: 1.4vw;
+    font-size: calc(0.8vw + 5px);
     text-shadow: 
         0.5px 0.5px 0.45vw rgba(0, 0, 0, 0.8);
+    z-index: 51;
+    cursor: pointer;
 }
 .footer-headings{    
-    font-size: calc(2.3vw + 5px);
+    font-size: calc(2.1vw + 5px);
     padding-bottom: 1vw;
 }
 .footer-icon{
-    font-size: calc(1vw + 5px);
+    font-size: calc(0.8vw + 5px);
     text-shadow: 
         0.5px 0.5px 0.35vw rgba(0, 0, 0, 0.5);   
 }
@@ -252,10 +228,10 @@ body{
 .footer-contents-container:hover{    
     transform: scale(1.03);
 }
-.columntwo{    
+.photograher-png-card{    
     position: relative;
     z-index: 7;
-    margin-top: 30%;
+    margin-top: 70%;
 }
 .photograher-png{
     transform: scale(2);
@@ -272,8 +248,8 @@ body{
 .whatsapp-text-container{
     background-color: #23be5c;
     color: white;
-    width: 17.5vw;
-    height: 5vw;
+    width: 16.5vw;
+    height: 4vw;
     position: relative;
     right: 2vw;
     bottom: 3.1vw;
@@ -282,34 +258,36 @@ body{
     border-bottom-right-radius: 25vw;
     border-top-left-radius: 25vw;    
     border-bottom-left-radius: 25vw;
-    font-size: 1.85vw;
+    font-size: 1.7vw;
     text-align: center;
     font-weight: 600;
-    border-color: white;
+    border-color: rgb(255, 255, 255);
     border-style: solid;
     border-width: 0.4vw;
 }
 .whatsapp-icon-container{    
     z-index: 1000;
     position: absolute;
-    font-size: 9vw;
+    font-size: 8vw;
     right: 2.5vw;
     bottom: 4vw;
     color: white;    
     border-radius: 50%;
-    background-color: #25D366;
-    padding-right: 2vw;
-    padding-left: 2vw;
+    background-color: #25D366;  
+    padding-bottom: 0.2vw;    
+    padding-right: 2.1vw;
+    padding-left: 2.1vw;
 }
 .whatsapp-text{
-    padding-top: 0.6vw;
-    padding-left: 0.4vw;
+    padding-top: 0.2vw;
+    padding-left: 0.2vw;
+    padding-right: 0.3vw;
     text-shadow: 
     0px 0.5px 0.25vw rgba(0, 0, 0, 0.4);
 }
 .whatsapp-lg{
-    font-size: 5vw;
-    margin-top: -1.8vw;
-    margin-right: -1vw;    
+    font-size: 3.85vw;
+    margin-top: -1.37vw;
+    margin-right: -1.45vw;    
     margin-left: 0.5vw;
 }
