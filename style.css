@@ -233,7 +233,7 @@ body{
 .photograher-png-card{    
     position: relative;
     z-index: 9;
-    margin-top: 70%;
+    margin-top: 60%;
 }
 .photograher-png{
     transform: scale(2);
