@@ -6,13 +6,20 @@ body{
 .homepage{    
     background: linear-gradient(to top,     
             rgb(90, 41, 112),
-            rgba(80, 27, 105, 0.55),
-            rgb(157, 72, 196,0.25),
+            rgba(80, 27, 105, 0.5),
+            rgb(157, 72, 196,0.2),
             rgba(255,255,255,1));
 }
 .homepage-content{
     padding-left: 7vw;
     padding-right: 7vw;
+}
+.logo{
+    color: aqua;
+}
+.logo-text{
+    padding-left: 10px;    
+    color: aqua;
 }
 .carousel-indicators{
     top: 28vw;
@@ -20,7 +27,7 @@ body{
     margin-bottom: 0px;
 }
 .nav-option-color{
-    color: rgb(0, 230, 230);
+    color: aqua;
     font-weight: 500;
 }
 .navbar-nav .nav-link:hover {
@@ -68,11 +75,12 @@ body{
 }
 .home-heading{
     z-index: 11;
+    transform: rotateZ(0deg);
 }
 .services-card-title {
     color: #183b56;
     font-family: "Bree Serif";
-    font-size: clamp(9px, 1.3vw, 1.3vw);
+    font-size: clamp(11px, 1.6vw, 1.6vw);
     text-align: center;
     font-weight: 500;
     font-style: italic;
@@ -88,7 +96,7 @@ body{
 .services-item-card {
     border-radius: 1.3vw;
     position: relative;
-    background: rgba(255, 255, 255, 0.92);    
+    background: rgba(255, 255, 255, 0.9);    
     box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);    
     z-index: 10;
     padding: calc(0.3vw + 2px);
@@ -97,32 +105,48 @@ body{
     margin-bottom: 6px;
     padding: 9px;
 }
+.sub-heading{
+    padding-left: 0px;    
+    font-size: clamp(18px, 2vw, 2vw);
+}
+.right-arrow{
+    position: relative;
+    top: 0.21vw;
+    left: 0.2vw;
+    padding-right: 0.35vw;
+}
 .view-gallery-container{
-    margin-top: -1vw;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-right: 1.2vw;
 }
 .view-gallery{
-    color: rgb(0, 230, 230);
-    font-size: 3vw;
-    text-align: center;
+    color: aqua;
+    font-size: 1.7vw;
     font-family: "Bree Serif";
+    padding-left: 0.35vw;
 }
 .view-gallery-card{
+    margin-top: 1vw;
+    margin-right: 2vw;
+    padding-top: 14.5px;
+    padding-bottom: 10px;
+    padding-left: 10px;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.585);
-    border-radius: 1.3vw;
-    height: 84%;
-}
+    border-radius: 0.5vw;
+    transition: transform 0.3s ease;
+    box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.3);  
+}   
 
 .view-gallery-card:hover{
-    transform: scale(1.03);
+    transform: scale(0.9);
 }
 
 #carouselExampleIndicators{
     z-index: 2;
 }
-
+.album-carousel-img{
+    border-radius: 3vw;
+}
 #section-gallery{
     background: radial-gradient(circle, rgb(255, 0, 0), #cc0000);
     height: 100%;
@@ -192,8 +216,8 @@ body{
 .footer {    
     position: relative;
     background: linear-gradient(to bottom, 
-            rgba(0, 0, 0, 0) 0%, /* Top 10% */
-            rgba(0, 0, 0, 0.15) 20%, /* Solid until 10% */
+            rgba(0, 0, 0, 0) 0%, 
+            rgba(0, 0, 0, 0.15) 20%, 
             rgba(0, 0, 0, 0.68) 100%);
     color: white;
     z-index: 50;
@@ -220,7 +244,7 @@ body{
 .footer-icon{
     font-size: calc(0.8vw + 5px);
     text-shadow: 
-        0.5px 0.5px 0.35vw rgba(0, 0, 0, 0.5);   
+        0.5px 0.5px 0.35vw rgba(0, 0, 0, 0.5);  
 }
 .footer-contents-container {
     background-color: transparent;
@@ -231,7 +255,7 @@ body{
 .photograher-png-card{    
     position: relative;
     z-index: 7;
-    margin-top: 70%;
+    margin-top: 100%;
 }
 .photograher-png{
     transform: scale(2);
@@ -290,4 +314,50 @@ body{
     margin-top: -1.37vw;
     margin-right: -1.45vw;    
     margin-left: 0.5vw;
+}
+.custom-border {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.08);
+    padding: calc(1vw + 7px);
+    padding-top: calc(0.95vw + 2px);    
+    padding-bottom: calc(1vw + 2px);
+    margin-right: 16vw;
+    color: #183b56;
+    /*color: #501b69;*/
+    font-size: clamp(10px, 1.3vw, 1.3vw);
+    word-spacing: 1px;
+    font-weight: 500;
+    border-top-right-radius: 1.2vw;
+    border-bottom-left-radius: 1.2vw;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3); 
+}
+@media (max-width: 492px) {
+    .custom-border {
+        margin-right: 0vw;
+    }
+}
+
+.custom-border::before,
+.custom-border::after {
+    content: '';
+    position: absolute;
+    border: 2px solid black;   
+}
+
+.custom-border::before {
+    top: 0;
+    left: 0;
+    width: 13%; 
+    height: 50%; 
+    border-bottom: none; 
+    border-right: none;
+}
+
+.custom-border::after {
+    bottom: 0;
+    right: 0;
+    width: 13%; 
+    height: 50%; 
+    border-top: none; 
+    border-left: none;
 }
